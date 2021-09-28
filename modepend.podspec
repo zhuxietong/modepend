@@ -28,6 +28,8 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/zhuxietong@me.com/modepend.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.3' }
+  s.swift_versions = '5.3'
 
   s.subspec 'Base' do |lib|
       lib.name = 'Base'
