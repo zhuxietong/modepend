@@ -1,0 +1,159 @@
+PODS:
+  - Alamofire (5.4.4)
+  - Atributika (4.10.1)
+  - DateTimePicker (2.5.3)
+  - Eelay (5.3.4)
+  - JoLoading (5.1.4):
+    - Eelay
+  - Kingfisher (7.0.0)
+  - Lantern (1.1.2)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.2)
+  - modepend (0.1.0):
+    - modepend/Base (= 0.1.0)
+  - modepend/Base (0.1.0)
+  - modepend/Kingfisher (0.1.0):
+    - Kingfisher
+    - modepend/Base
+  - RTRootNavigationController (0.8.0):
+    - RTRootNavigationController/Core (= 0.8.0)
+  - RTRootNavigationController/Core (0.8.0)
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.3)
+  - soapp (0.1.0):
+    - soapp/Alert (= 0.1.0)
+    - soapp/ASSupport (= 0.1.0)
+    - soapp/Auth (= 0.1.0)
+    - soapp/Base (= 0.1.0)
+    - soapp/Core (= 0.1.0)
+    - soapp/EeTopStyle (= 0.1.0)
+    - soapp/fform (= 0.1.0)
+    - soapp/Oc (= 0.1.0)
+    - soapp/PhotoBrowser (= 0.1.0)
+    - soapp/Regex (= 0.1.0)
+    - soapp/RTNavigation (= 0.1.0)
+    - soapp/Sqlite3 (= 0.1.0)
+    - soapp/XLPagerTabStrip (= 0.1.0)
+  - soapp/Alert (0.1.0):
+    - soapp/Base
+  - soapp/AppPlugins (0.1.0):
+    - soapp/Alert
+    - soapp/ASSupport
+    - soapp/Chinese
+    - soapp/fform
+    - soapp/MediaAssets
+    - soapp/Oc
+    - soapp/PhotoBrowser
+    - soapp/RTImage
+    - soapp/StarView
+    - soapp/ViewPager
+    - soapp/XLPagerTabStrip
+  - soapp/ASSupport (0.1.0):
+    - Atributika
+    - soapp/Core
+    - soapp/Texture
+    - soapp/TPKeyboardAvoiding
+  - soapp/Auth (0.1.0):
+    - soapp/Core
+    - soapp/EeTopStyle
+    - soapp/Sqlite3
+  - soapp/Base (0.1.0):
+    - Eelay
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+    - soapp/Regex
+    - SwiftyJSON
+    - XLPagerTabStrip (~> 9.0)
+  - soapp/Chinese (0.1.0):
+    - soapp/Base
+  - soapp/Core (0.1.0):
+    - Alamofire
+    - JoLoading
+    - MBProgressHUD
+    - MJRefresh
+    - modepend
+    - soapp/Base
+  - soapp/EeTopStyle (0.1.0)
+  - soapp/fform (0.1.0):
+    - DateTimePicker
+    - soapp/Base
+    - TZImagePickerController
+  - soapp/MediaAssets (0.1.0)
+  - soapp/Oc (0.1.0)
+  - soapp/PhotoBrowser (0.1.0):
+    - Lantern
+    - soapp/ASSupport
+  - soapp/Regex (0.1.0)
+  - soapp/RTImage (0.1.0)
+  - soapp/RTNavigation (0.1.0):
+    - RTRootNavigationController
+  - soapp/Sqlite3 (0.1.0)
+  - soapp/StarView (0.1.0)
+  - soapp/Texture (0.1.0)
+  - soapp/TPKeyboardAvoiding (0.1.0)
+  - soapp/ViewPager (0.1.0):
+    - soapp/Base
+  - soapp/XLPagerTabStrip (0.1.0):
+    - soapp/Core
+    - XLPagerTabStrip (~> 9.0)
+  - SwiftyJSON (5.0.1)
+  - TZImagePickerController (3.6.6)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - modepend/Kingfisher (from `../`)
+  - soapp (from `~/hitching_ios/Hitching/soapp`)
+  - soapp/AppPlugins (from `~/hitching_ios/Hitching/soapp`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Atributika
+    - DateTimePicker
+    - Eelay
+    - JoLoading
+    - Kingfisher
+    - Lantern
+    - MBProgressHUD
+    - MJRefresh
+    - RTRootNavigationController
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftyJSON
+    - TZImagePickerController
+    - XLPagerTabStrip
+
+EXTERNAL SOURCES:
+  modepend:
+    :path: "../"
+  soapp:
+    :path: "~/hitching_ios/Hitching/soapp"
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Atributika: 47e778507cfb3cd2c996278b0285221a62e97d71
+  DateTimePicker: 52701ddf656a50856d3510955933f767cd2c947c
+  Eelay: a6e68b577c5adaf12ee1c161c46e2715832ced0c
+  JoLoading: 1fa9e3472ce47e5b4430cbf1f58e16cd27d684eb
+  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
+  Lantern: ed012be9a7c989ff5b94c080129a4734b45304b6
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
+  modepend: deb16628b1eda71918b9fc703471cdf70f9647b9
+  RTRootNavigationController: 36c6301870f0467f89d69f4286795340b537d473
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
+  RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
+  soapp: 8b811b238b701ca5e8c5dcd0292ddb23173dfae2
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  TZImagePickerController: edf61b8e87f26e3e445aa50eb66254bd7f4859db
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: d6cde2d2d392b01a109c67d6f563ae86a537ba5d
+
+COCOAPODS: 1.10.1

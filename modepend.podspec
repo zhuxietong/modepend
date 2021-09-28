@@ -28,15 +28,37 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/zhuxietong@me.com/modepend.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'modepend/Classes/**/*'
+  s.subspec 'Base' do |lib|
+      lib.name = 'Base'
+      lib.source_files = [
+      'modepend/Classes/**.{swift,h,m}',
+      ]
+
+
+  end
   
-  # s.resource_bundles = {
-  #   'modepend' => ['modepend/Assets/*.png']
-  # }
+  s.subspec 'Kingfisher' do |lib|
+      lib.ios.deployment_target = '12.0'
+      lib.name = 'Kingfisher'
+      lib.source_files = [
+      'modepend/Classes/Kingfisher/**.{swift,h,m}',
+      'modepend/Classes/Kingfisher/**/*.{swift,h,m}',
+      ]
+      lib.dependency 'modepend/Base'
+      lib.dependency 'Kingfisher'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  end
+  
+  s.subspec 'SDWebImage' do |lib|
+      lib.ios.deployment_target = '10.0'
+      lib.name = 'SDWebImage'
+      lib.source_files = [
+      'modepend/Classes/SDWebImage/**.{swift,h,m}',
+      'modepend/Classes/SDWebImage/**/*.{swift,h,m}',
+      ]
+      lib.dependency 'modepend/Base'
+      lib.dependency 'SDWebImage'
+  end
+  s.default_subspec = 'Base'
 end

@@ -1,0 +1,6 @@
+framework module modepend {
+  umbrella header "modepend-umbrella.h"
+
+  export *
+  module * { export * }
+}

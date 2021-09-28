@@ -1,0 +1,391 @@
+{
+  "name": "soapp",
+  "version": "0.1.0",
+  "summary": "A short description of soapp.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zhuxietong/soapp",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhuxietong": "zhuxietong@me.com"
+  },
+  "source": {
+    "git": "https://gitee.com/cocoa.me/soapp.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "5.3"
+  },
+  "swift_versions": "5.3",
+  "default_subspecs": [
+    "Regex",
+    "Oc",
+    "Base",
+    "Core",
+    "EeTopStyle",
+    "Sqlite3",
+    "Auth",
+    "ASSupport",
+    "PhotoBrowser",
+    "RTNavigation",
+    "XLPagerTabStrip",
+    "Alert",
+    "fform"
+  ],
+  "subspecs": [
+    {
+      "name": "Regex",
+      "source_files": [
+        "soapp/Classes/Regex/**.{swift,h,m}",
+        "soapp/Classes/Regex/**/*.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "Base",
+      "source_files": [
+        "soapp/Classes/Base/**/*.{swift,h,m}",
+        "soapp/Classes/Base/**/**/*.{swift,h,m}",
+        "soapp/Classes/Base/**/**/**/*.{swift,h,m}",
+        "soapp/Classes/Base/**/**/**/**/*.{swift,h,m}",
+        "soapp/Classes/Base/**/**/**/**/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Regex": [
+
+        ],
+        "SwiftyJSON": [
+
+        ],
+        "Eelay": [
+
+        ],
+        "XLPagerTabStrip": [
+          "~> 9.0"
+        ],
+        "RxSwift": [
+          "~>5.0"
+        ],
+        "RxCocoa": [
+          "~>5.0"
+        ]
+      }
+    },
+    {
+      "name": "Oc",
+      "source_files": [
+        "soapp/Classes/Oc/**/*.{swift,h,m}",
+        "soapp/Classes/Oc/**/**/*.{swift,h,m}",
+        "soapp/Classes/Oc/**/**/**/*.{swift,h,m}",
+        "soapp/Classes/Oc/**/**/**/**/*.{swift,h,m}",
+        "soapp/Classes/Oc/**/**/**/**/**/*.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "Core",
+      "source_files": [
+        "soapp/Classes/Core/**/*.{swift,h,m}",
+        "soapp/Classes/Core/**/**/*.{swift,h,m}",
+        "soapp/Classes/Core/**/**/**/*.{swift,h,m}",
+        "soapp/Classes/Core/**/**/**/**/*.{swift,h,m}",
+        "soapp/Classes/Core/**/**/**/**/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Base": [
+
+        ],
+        "JoLoading": [
+
+        ],
+        "modepend": [
+
+        ],
+        "Alamofire": [
+
+        ],
+        "MJRefresh": [
+
+        ],
+        "MBProgressHUD": [
+
+        ]
+      },
+      "resource_bundles": {
+        "soappAsset": [
+          "soapp/Assets/soappAsset.xcassets"
+        ]
+      }
+    },
+    {
+      "name": "Sqlite3",
+      "source_files": [
+        "soapp/Classes/Sqlite3/*.{swift,h,m}"
+      ],
+      "libraries": "sqlite3"
+    },
+    {
+      "name": "TPKeyboardAvoiding",
+      "source_files": [
+        "soapp/Classes/TPKeyboardAvoiding/*.{swift,h,m}",
+        "soapp/Classes/TPKeyboardAvoiding/**/*.{swift,h,m}",
+        "soapp/Classes/TPKeyboardAvoiding/**/**/*.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "Texture",
+      "preserve_paths": "soapp/Vendors/AsyncDisplayKit.xcframework",
+      "pod_target_xcconfig": {
+        "FRAMEWORK_SEARCH_PATHS": "$(inherited) $(SRCROOT)/**"
+      },
+      "libraries": "c++",
+      "ios": {
+        "vendored_frameworks": "soapp/Vendors/AsyncDisplayKit.xcframework"
+      }
+    },
+    {
+      "name": "ASSupport",
+      "source_files": [
+        "soapp/Classes/ASSupport/*.{swift,h,m}",
+        "soapp/Classes/ASSupport/**/*.{swift,h,m}",
+        "soapp/Classes/ASSupport/**/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Core": [
+
+        ],
+        "soapp/Texture": [
+
+        ],
+        "Atributika": [
+
+        ],
+        "soapp/TPKeyboardAvoiding": [
+
+        ]
+      }
+    },
+    {
+      "name": "EeTopStyle",
+      "source_files": [
+        "soapp/Classes/EeTopStyle/*.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "RTNavigation",
+      "source_files": [
+        "soapp/Classes/EeTopStyle/RTNavigation/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "RTRootNavigationController": [
+
+        ]
+      }
+    },
+    {
+      "name": "Auth",
+      "source_files": [
+        "soapp/Classes/Auth/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Core": [
+
+        ],
+        "soapp/Sqlite3": [
+
+        ],
+        "soapp/EeTopStyle": [
+
+        ]
+      },
+      "resources": [
+        "soapp/Classes/Auth/user.db"
+      ]
+    },
+    {
+      "name": "Chinese",
+      "source_files": [
+        "soapp/Classes/Task/Chinese/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Base": [
+
+        ]
+      }
+    },
+    {
+      "name": "PhotoBrowser",
+      "source_files": [
+        "soapp/Classes/Extension/PhotoBrowser/*.{swift,h,m}",
+        "soapp/Classes/Extension/PhotoBrowser/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "Lantern": [
+
+        ],
+        "soapp/ASSupport": [
+
+        ]
+      }
+    },
+    {
+      "name": "RTImage",
+      "source_files": [
+        "soapp/Classes/Extension/RTImage/*.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "LBXScan",
+      "source_files": [
+        "soapp/Classes/Extension/LBXScan/*.{swift,h,m}",
+        "soapp/Classes/Extension/LBXScan//*.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "StarView",
+      "source_files": [
+        "soapp/Classes/Extension/StarView/*.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "MediaAssets",
+      "source_files": [
+        "soapp/Classes/Extension/MediaAssets/*.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "XLPagerTabStrip",
+      "source_files": [
+        "soapp/Classes/Extension/XLPagerTabStrip/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Core": [
+
+        ],
+        "XLPagerTabStrip": [
+          "~> 9.0"
+        ]
+      }
+    },
+    {
+      "name": "Jukebox",
+      "source_files": [
+        "soapp/Classes/Extension/Jukebox/*.{swift,h,m}",
+        "soapp/Classes/Extension/Jukebox/**/*.{swift,h,m}",
+        "soapp/Classes/Extension/Jukebox/**/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Base": [
+
+        ]
+      },
+      "resources": [
+        "soapp/Classes/Extension/Jukebox/AudioPlayer/EeAudio.xcassets"
+      ]
+    },
+    {
+      "name": "ViewPager",
+      "source_files": [
+        "soapp/Classes/Extension/ViewPager/*.{swift,h,m}",
+        "soapp/Classes/Extension/ViewPager/**/*.{swift,h,m}",
+        "soapp/Classes/Extension/ViewPager/**/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Base": [
+
+        ]
+      }
+    },
+    {
+      "name": "Alert",
+      "source_files": [
+        "soapp/Classes/Alert/*.{swift,h,m}",
+        "soapp/Classes/Alert/**/*.{swift,h,m}",
+        "soapp/Classes/Alert/**/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Base": [
+
+        ]
+      }
+    },
+    {
+      "name": "fform",
+      "source_files": [
+        "soapp/Classes/fform/*.{swift,h,m}",
+        "soapp/Classes/fform/**/*.{swift,h,m}",
+        "soapp/Classes/fform/**/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "DateTimePicker": [
+
+        ],
+        "TZImagePickerController": [
+
+        ],
+        "soapp/Base": [
+
+        ]
+      }
+    },
+    {
+      "name": "XLVideoPlayer",
+      "source_files": [
+        "soapp/Classes/Extension/XLVideoPlayer/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Base": [
+
+        ]
+      },
+      "resources": [
+        "soapp/Classes/Extension/XLVideoPlayer/Audio.xcassets"
+      ]
+    },
+    {
+      "name": "AppPlugins",
+      "source_files": [
+        "soapp/Classes/AppPlugins/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "soapp/Oc": [
+
+        ],
+        "soapp/MediaAssets": [
+
+        ],
+        "soapp/StarView": [
+
+        ],
+        "soapp/RTImage": [
+
+        ],
+        "soapp/PhotoBrowser": [
+
+        ],
+        "soapp/Chinese": [
+
+        ],
+        "soapp/XLPagerTabStrip": [
+
+        ],
+        "soapp/ASSupport": [
+
+        ],
+        "soapp/ViewPager": [
+
+        ],
+        "soapp/fform": [
+
+        ],
+        "soapp/Alert": [
+
+        ]
+      }
+    }
+  ],
+  "swift_version": "5.3"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "modepend",
+  "version": "0.1.0",
+  "summary": "A short description of modepend.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zhuxietong@me.com/modepend",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhuxietong@me.com": "zhuxietong@me.com"
+  },
+  "source": {
+    "git": "https://github.com/zhuxietong@me.com/modepend.git",
+    "tag": "0.1.0"
+  },
+  "default_subspecs": "Base",
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  },
+  "subspecs": [
+    {
+      "name": "Base",
+      "source_files": [
+        "modepend/Classes/**.{swift,h,m}"
+      ]
+    },
+    {
+      "name": "Kingfisher",
+      "platforms": {
+        "ios": "12.0"
+      },
+      "source_files": [
+        "modepend/Classes/Kingfisher/**.{swift,h,m}",
+        "modepend/Classes/Kingfisher/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "modepend/Base": [
+
+        ],
+        "Kingfisher": [
+
+        ]
+      }
+    },
+    {
+      "name": "SDWebImage",
+      "platforms": {
+        "ios": "10.0"
+      },
+      "source_files": [
+        "modepend/Classes/SDWebImage/**.{swift,h,m}",
+        "modepend/Classes/SDWebImage/**/*.{swift,h,m}"
+      ],
+      "dependencies": {
+        "modepend/Base": [
+
+        ],
+        "SDWebImage": [
+
+        ]
+      }
+    }
+  ]
+}
